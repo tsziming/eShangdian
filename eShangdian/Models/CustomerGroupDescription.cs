@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace eShangdian.Models
 {
-    public class AttributeDescription
+    public class CustomerGroupDescription
     {
         [Key]
         public int Id { get; set; }
@@ -15,8 +15,12 @@ namespace eShangdian.Models
         [StringLength(32)]
         public string Name { get; set; }
         [Required]
-        public Language Language { get; set; }
+        [DataType(DataType.Text)]
+        [StringLength(512)]
+        public string Description { get; set; }
         [Required]
-        public Attribute Attribute { get; set; }
+        public CustomerGroup Group { get; set; }
+        [Required]
+        public Language Language { get; set; }
     }
 }

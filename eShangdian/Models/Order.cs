@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -18,10 +20,16 @@ namespace eShangdian.Models
     }
     public class Order
     {
+        [Key]
         public int Id { get; set; }
+        [DataType(DataType.Text)]
+        [StringLength(512)]
+        public string Comment { get; set; }
+        [Required]
         public Customer Customer { get; set; }
         public List<Product> Products { get; set; }
+        [Required]
+        [DefaultValue(OrderStatuses.Processing)]
         public OrderStatuses OrderStatus { get; set; }
-        public decimal TotalPrice { get; set; }
     }
 }
