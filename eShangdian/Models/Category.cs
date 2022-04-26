@@ -6,6 +6,12 @@ using System.Threading.Tasks;
 
 namespace eShangdian.Models
 {
+    public enum CategoryStatuses
+    {
+        Plain,
+        Featured,
+        Home,
+    }
     public class Category
     {
         [Key]
@@ -13,5 +19,7 @@ namespace eShangdian.Models
         public List<CategoryDescription> Descriptions { get; set; }
         public Category Parent { get; set; }
         public List<Category> Children { get; set; }
+        public CategoryStatuses Status { get; set; }
+        
     }
 }
