@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  eshangdian:
+    image: ${DOCKER_REGISTRY-}eshangdian
+    build:
+      context: .
+      dockerfile: eShangdian/Dockerfile
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    environment:
+      - SA_PASSWORD=Change Me!1!1!
+      - ACCEPT_EULA=Y
+    ports:
+      - "1440:1433"

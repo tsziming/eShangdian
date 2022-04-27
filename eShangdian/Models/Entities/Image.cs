@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace eShangdian.Models.Entities
 {
@@ -10,14 +11,12 @@ namespace eShangdian.Models.Entities
         [DataType(DataType.Text)]
         [StringLength(64)]
         public string Name { get; set; }
-        [DataType(DataType.Text)]
-        [StringLength(256)]
-        public string Description { get; set; }
         [Required]
         [DataType(DataType.ImageUrl)]
         public string ImageUrl { get; set; }
         [Required]
         [DataType(DataType.Text)]
         public string FilePath { get; set; }
+        public List<Product> Products { get; set; }
     }
 }

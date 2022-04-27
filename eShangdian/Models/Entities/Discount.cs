@@ -10,7 +10,7 @@ namespace eShangdian.Models.Entities
     {
         [Key]
         public int Id { get; set; }
-        public Product Product { get; set; }
+        public virtual Product Product { get; set; }
         [Required]
         [Range(0,100)]
         public decimal Percentage { get; set; }

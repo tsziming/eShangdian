@@ -12,5 +12,6 @@ namespace eShangdian.Models.Entities
         public int Id { get; set; }
         public List<AttributeDescription> Descriptions { get; set; }
         public AttributeGroup Group { get; set; }
+        public List<ProductAttribute> Products { get; set; }
     }
 }

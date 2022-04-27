@@ -15,8 +15,9 @@ namespace eShangdian.Models.Entities
         public List<Tag> Tags { get; set; }
         public Manufacturer Manufacturer { get; set; }
         public List<Category> Categories { get; set; }
-        public List<ProductAttribute> Attributes { get; set; } 
-        public Discount Discount { get; set; }
+        public List<ProductAttribute> Attributes { get; set; }
+        public int DiscountId { get; set; }
+        public virtual Discount Discount { get; set; }
         public List<Image> Images { get; set; }
     }
 }
