@@ -1,4 +1,4 @@
-﻿using eShangdian.Models;
+﻿using eShangdian.Models.Entities;
 using System.Linq;
 
 namespace eShangdian.Data

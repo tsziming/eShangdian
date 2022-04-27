@@ -1,4 +1,4 @@
-﻿using eShangdian.Models;
+﻿using eShangdian.Models.Entities;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -14,7 +14,7 @@ namespace eShangdian.Data
         }
 
         public DbSet<Admin> Admins { get; set; }
-        public DbSet<Models.Attribute> Attributes { get; set; }
+        public DbSet<Models.Entities.Attribute> Attributes { get; set; }
         public DbSet<AttributeDescription> AttributeDescriptions { get; set; }
         public DbSet<AttributeGroup> AttributeGroups { get; set; }
         public DbSet<AttributeGroupDescription> AttributeGroupDescriptions { get; set; }
