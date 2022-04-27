@@ -5,7 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.ComponentModel;
 
-namespace eShangdian.Models
+namespace eShangdian.Models.Entities
 {
     public class Admin
     {

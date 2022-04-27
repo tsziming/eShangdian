@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace eShangdian.Models
+namespace eShangdian.Models.Entities
 {
     public class Product
     {
@@ -17,5 +17,6 @@ namespace eShangdian.Models
         public List<Category> Categories { get; set; }
         public List<ProductAttribute> Attributes { get; set; } 
         public Discount Discount { get; set; }
+        public List<Image> Images { get; set; }
     }
 }
